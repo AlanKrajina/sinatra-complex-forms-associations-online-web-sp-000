@@ -25,3 +25,10 @@
  
   <input type="submit" value="Create Owner">
 </form>
+
+
+# 3 input 'name=' changes  -> got new owner and pet PARAMS
+# new.erb -> creates a new owner, ADDS a existing pet and CREATES and ADDS a new pet -OR- creates a new owner and adds a existing pet -OR- creates a new owner and adds and creates a new pet
+
+@owner = Owner.create(params[:owner])
+@owner.pets << Pet.create(name: params["pet"]["name"])
